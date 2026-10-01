@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rajagiri Hospital - Gene Coverage Summary</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <img src="header_logo.png"
+             alt="Rajagiri Hospital"
+             class="header-image">
+
+    </header>
+
+
+    <!-- ================= TITLE ================= -->
+
+    <section class="title-section">
+
+        <h1>Gene Coverage Summary</h1>
+
+       
+
+    </section>
+
+
+
+    <!-- ================= SEARCH ================= -->
+
+    <section class="search-section">
+
+        <div class="search-box">
+
+            <svg
+                class="search-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2">
+
+                <circle cx="10" cy="10" r="7"></circle>
+
+                <line x1="15.5" y1="15.5" x2="21" y2="21"></line>
+
+            </svg>
+
+
+            <input
+
+                id="searchInput"
+
+                type="text"
+
+                placeholder="Search Gene Symbol (e.g. CFTR, BRCA1, SMN1)"
+
+            >
+
+        </div>
+
+    </section>
+
+<div class="button-container">
+
+    <button id="downloadBtn" class="download-btn">
+    ⬇ Download Gene coverage CSV
+</button>
+
+</div>
+
+
+    <!-- ================= TABLE ================= -->
+
+    <section class="table-section">
+
+        <div class="table-wrapper">
+
+            <table id="coverageTable">
+
+                <thead>
+
+                    <tr>
+
+                        <th width="60%">
+                            Gene
+                        </th>
+
+                        <th width="40%">
+                             Coverage (%)
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="tableBody">
+
+                    <!-- Filled by JavaScript -->
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+
+
+    <!-- ================= NO RESULT ================= -->
+
+    <div
+
+        id="noResults"
+
+        class="no-results"
+
+        style="display:none;"
+
+    >
+
+        No matching gene found.
+
+    </div>
+
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        Coverage statistics represent the percentage of targeted bases
+        covered using the validated capture BED.
+
+    </footer>
+
+</div>
+
+
+
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
